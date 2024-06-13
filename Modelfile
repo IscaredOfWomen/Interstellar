@@ -1,6 +1,8 @@
 FROM codellama:latest
 # set the temperature to 1 [higher is more creative, lower is more coherent]
 PARAMETER temperature 0.3
+# sets the context window size to 1096, this controls how many tokens the LLM can use as context to generate the next token
+PARAMATER num_ctx 4096
 
 # set the system message
 SYSTEM """
